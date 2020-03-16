@@ -8,7 +8,7 @@ int _printf(const char *format, ...);
 /* print ascii */
 int print_char(char c);
 int print_string(char *s);
-
+int print_integer(int n);
 /* convert list to print ascii */
 int convert_char(va_list list);
 int convert_string(va_list list);
