@@ -4,7 +4,7 @@
 
 int print_char(char c);
 int print_string(va_list list);
-int print_integer(int n);
+int print_integer(int n, int count);
 int print_double(long int n);
 typedef struct newdatatype
 {
