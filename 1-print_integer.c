@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * reverse - reverse and prints numbers
  * @n: receive a number
@@ -47,12 +46,5 @@ int print_integer(int n)
 		print_char(45);
 		cont = reverse(n);
 	}
-	printf("Num of digits %i", cont);
 	return (cont);
 }
-
-/**
- * reverse - reverse and prints numbers
- * @n: receive a number
- * Return: Amount of digits of the number n
- */
