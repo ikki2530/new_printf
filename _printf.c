@@ -1,3 +1,4 @@
+#include "holberton.h"
 /**
  * _printf - prints int, char, string, float
  * @format: string to print
@@ -5,39 +6,25 @@
  */
 int _printf(const char *format, ...)
 {
-        int i, j, cont;
-        char c, c1;
-        va_list lista;
-        datat dtype[] = {
-                {"c", print_char},
-                {"s", print_string},
-                {"i", print_int},
-                {"d", print_d}
-        };
+        int i, j, len = 0;
+	va_list(list);
+	const char *s;
 
-        i = j = 0;
-        va_start(lista, format);
-        while (format != '\0' && format[i] != '\0')
+        va_start(list, format);
+        for (i = 0; format != '\0' && format[i] != '\0'; i++)
         {
-                c = format[i];
-                j = 0;
-                if (c == '%')
-                {
-                        c1 = format[i + 1];
-                        while(j < 4)
-                        {
-                                if (c1 != '\0' && dtype[j].dt[0] == c1)
-                                        cont += dtype[j].func(lista);
-                                j++;
-                        }
-                        (c1 == '%') ? (_putchar(c1)) : (j++);
-                }
+                if (format[i] == '%')
+		{
+			s = &format[i + 1];
+			len = len + find(s, list);
+			i = i + 1;
+		}
                 else
                 {
-                        _putchar(c);
-                        cont++;
+                        print_char(format[i]);
+                        len++;
                 }
-                (j == 0) ? (i++) : (i += 2);
         }
-        return (cont);
+	va_end(list);
+        return (len);
 }

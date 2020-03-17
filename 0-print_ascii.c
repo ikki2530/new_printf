@@ -1,6 +1,15 @@
 #include "holberton.h"
 
 
+int print_char(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+#include "holberton.h"
+
+
 int print_string(char *s)
 {
 	int i = 0, len = 0;
