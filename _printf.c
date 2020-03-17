@@ -6,25 +6,23 @@
  */
 int _printf(const char *format, ...)
 {
-        int i, j, len = 0;
-	va_list(list);
-	const char *s;
+	int i, j, len = 0;
 
-        va_start(list, format);
-        for (i = 0; format != '\0' && format[i] != '\0'; i++)
-        {
-                if (format[i] == '%')
+	va_list(list);
+	va_start(list, format);
+	for (i = 0; format != '\0' && format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
 		{
-			s = &format[i + 1];
-			len = len + find(s, list);
+			len = len + find(&format[i + 1], list);
 			i = i + 1;
 		}
-                else
-                {
-                        print_char(format[i]);
-                        len++;
-                }
-        }
+		else
+		{
+			print_char(format[i]);
+			len++;
+		}
+	}
 	va_end(list);
-        return (len);
+	return (len);
 }

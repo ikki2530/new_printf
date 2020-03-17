@@ -4,14 +4,14 @@ int main(void)
 {
 	char c = '\n';
 
-	char p = '\0';
+	int p = 910;
 	char *s = "";
 
 	int len;
 	int len2;
 
-	len2 = printf("%c %c", p, c);
-	len = _printf("%c %c", p, c);
+	len2 = printf("%i %c", p, c);
+	len = _printf("%i %c", p, c);
 	printf("Length:[%i]\n", len2);
 	_printf("Length:[%i]\n", len);
 	return (0);
