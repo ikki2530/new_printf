@@ -3,17 +3,17 @@
 int main(void)
 {
 	char c = '\n';
-
-	char p = '\0';
-	char *s = "";
+	int p = 0x12;
 
 	int len;
 	int len2;
 
-	len2 = printf("%c %c", p, c);
-	len = _printf("%c %c", p, c);
+	len2 = printf("printf normal con i = %i %c", p, c);
+	len2 = printf("printf normal co d  = %d %c", p, c);
+	len = _printf("printf nuestro con i = %i %c", p, c);
+	len = _printf("printf nuestro con d = %d %c", p, c);
 	printf("Length:[%i]\n", len2);
-	_printf("Length:[%i]\n", len);
+	printf("Length:[%i]\n", len);
 	return (0);
 
 }
