@@ -7,9 +7,14 @@ int _printf(const char *format, ...);
 
 /* print ascii */
 int print_char(char c);
+<<<<<<< HEAD
+int print_string(va_list list);
+int print_integer(int n, int count);
+=======
 int print_string(char *s);
 /* print numbers */
 int print_integer(int n);
+>>>>>>> 0b3c9cf3f41a45067ae1787bfdb94abc98777123
 int print_double(long int n);
 /* convert list to printeable ascii */
 int convert_char(va_list list);
