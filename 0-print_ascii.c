@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <unistd.h>
 /**
  *print_char - print a char
  *@c: char

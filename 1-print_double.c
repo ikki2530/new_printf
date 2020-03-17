@@ -1,22 +1,22 @@
 #include "holberton.h"
 /**
- *print_integer - call a recursion function with an iterator
+ *print_double - call a recursion function with an iterator
  *@n: number to print
  *Return: lenght of the number
  */
-int print_integer(int n)
+int print_double(double n)
 {
 	int i = 0;
 
-	return (recursion_int(n, i));
+	return (recursion_double(n, i));
 }
 /**
- *recursion_int - print
+ *recursion_double - print
  *@n: receive a number
  *@cont: count the lenght of number
  *Return: Amount of digits of the number n
  */
-int recursion_int(int n, int cont)
+int recursion_double(double n, int cont)
 {
 	unsigned int num;
 
@@ -30,7 +30,7 @@ int recursion_int(int n, int cont)
 
 	if (num / 10)
 	{
-		cont = recursion_int(num / 10, cont = cont + 1);
+		cont = recursion_double(num / 10, cont = cont + 1);
 	}
 	print_char((num % 10) + '0');
 	return (cont);
